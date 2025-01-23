@@ -6,6 +6,7 @@
 #
 
 LOCAL_PATH := device/vivo/PD2148
+
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -16,17 +17,9 @@ AB_OTA_POSTINSTALL_CONFIG += \
 # Boot control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service
-
-PRODUCT_PACKAGES += \
+    android.hardware.boot@1.0-service \
     bootctrl.vivo_PD2148
-
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.vivo_PD2148 \
-    libgptutils \
-    libz \
-    libcutils
-
+	
 PRODUCT_PACKAGES += \
     otapreopt_script \
     cppreopts.sh \
